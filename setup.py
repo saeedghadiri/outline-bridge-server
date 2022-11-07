@@ -41,7 +41,7 @@ config['inbounds'][0]['settings']['port'] = int(serverPort)
 
 # INPUT: BRIDGE PORT
 
-matches = re.findall(r"V2RAY_PORT=(\d+?)", env)
+matches = re.findall(r"V2RAY_PORT=(\d+)", env)
 defaultBridgePort = matches[0]
 
 bridgePort = input(f"Bridge Port: (Leave empty to use `{defaultBridgePort}`)\n")
