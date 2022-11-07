@@ -24,7 +24,7 @@ if bridgeIP == '':
 ssLink = input("Original ss:// link:\n")
 
 matches = re.findall(r"ss://[^@]+@(\d+\.\d+\.\d+\.\d+):(\d+).*", ssLink)
-if len(matches[0]) != 2:
+if len(matches) != 1 or len(matches[0]) != 2:
     print('Invalid outline (shadowsocks) link.')
     exit(1)
 
