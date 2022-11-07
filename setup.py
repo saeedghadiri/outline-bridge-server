@@ -55,6 +55,7 @@ open(configPath, 'w', encoding='utf-8').write(configContent)
 
 # SAVE ENV FILE
 envContent = f"V2RAY_PORT={bridgePort}\n"
+envPath = str(path.joinpath('.env'))
 open(envPath, 'w', encoding='utf-8').write(envContent)
 
 # PRINT OUT RESULT
