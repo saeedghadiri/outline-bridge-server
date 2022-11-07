@@ -12,7 +12,7 @@ configPath = str(path.joinpath('config/config.json'))
 configFile = open(configPath, 'r', encoding='utf-8')
 config = json.load(configFile)
 
-envPath = str(path.joinpath('.env'))
+envPath = str(path.joinpath('.env.example'))
 envFile = open(envPath, 'r', encoding='utf-8')
 env = envFile.read()
 
