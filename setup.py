@@ -60,4 +60,4 @@ open(envPath, 'w', encoding='utf-8').write(envContent)
 
 # PRINT OUT RESULT
 
-print('\nDone!')
+print('Done!')
