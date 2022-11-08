@@ -15,7 +15,7 @@ bridgePort = matches[0]
 # FETCH IP ADDRESS
 
 defaultBridgeIP = urlopen('http://ifconfig.io/ip').read().decode().rstrip()
-bridgeIP = input(f"V2Ray Hostname: (Leave empty to use `{defaultBridgeIP}`)\n")
+bridgeIP = input(f"Bridge Hostname: (Leave empty to use `{defaultBridgeIP}`)\n")
 if bridgeIP == '':
     bridgeIP = defaultBridgeIP
 
