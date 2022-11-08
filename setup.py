@@ -16,35 +16,35 @@ envPath = str(path.joinpath('.env.example'))
 envFile = open(envPath, 'r', encoding='utf-8')
 env = envFile.read()
 
-# INPUT: SERVER IP
+# INPUT: OUTLINE IP
 
-defaultIP = config['inbounds'][0]['settings']['address']
-if defaultIP == '<SERVER-IP>':
-    message = "Server IP/Hostname:\n"
+defaultOutlineIP = config['inbounds'][0]['settings']['address']
+if defaultOutlineIP == '<SERVER-IP>':
+    message = "Outline Server Hostname:\n"
 else:
-    message = f"Server IP/Hostname: (Leave empty to use `{defaultIP}`)\n"
+    message = f"Outline Server Hostname: (Leave empty to use `{defaultOutlineIP}`)\n"
 
-serverIP = input(message)
-if serverIP == '':
-    serverIP = defaultIP
+outlineIP = input(message)
+if outlineIP == '':
+    outlineIP = defaultOutlineIP
 
-config['inbounds'][0]['settings']['address'] = serverIP
+config['inbounds'][0]['settings']['address'] = outlineIP
 
-# INPUT: SERVER PORT
+# INPUT: OUTLINE PORT
 
-defaultPort = config['inbounds'][0]['settings']['port']
-serverPort = input(f"Server Port: (Leave empty to use `{defaultPort}`)\n")
-if serverPort == '':
-    serverPort = defaultPort
+defaultOutlinePort = config['inbounds'][0]['settings']['port']
+outlinePort = input(f"Outline Server Port: (Leave empty to use `{defaultOutlinePort}`)\n")
+if outlinePort == '':
+    outlinePort = defaultOutlinePort
 
-config['inbounds'][0]['settings']['port'] = int(serverPort)
+config['inbounds'][0]['settings']['port'] = int(outlinePort)
 
 # INPUT: BRIDGE PORT
 
 matches = re.findall(r"V2RAY_PORT=(\d+)", env)
 defaultBridgePort = matches[0]
 
-bridgePort = input(f"Bridge Port: (Leave empty to use `{defaultBridgePort}`)\n")
+bridgePort = input(f"V2Ray Port: (Leave empty to use `{defaultBridgePort}`)\n")
 if bridgePort == '':
     bridgePort = defaultBridgePort
 
