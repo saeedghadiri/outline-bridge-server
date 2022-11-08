@@ -1,25 +1,26 @@
 # Outline Bridge Server
 
-This repository contains sample Docker Compose files to run an Outline bridge server.
+This repository contains sample Docker Compose files to run a bridge server for the Outline proxy.
+It helps Outline to work in highly restricted networks.
 
 ## Documentation
 
 ### What is Outline?
 
-[Outline](https://getoutline.org) is a Shadowsocks-based proxy by Google.
-It lets you create Shadowsocks servers, set up clients, and manage users easily.
+[Outline](https://getoutline.org) is a Shadowsocks-based proxy created by Google.
+It provides high-quality Shadowsocks servers, clients, and managers.
 
-### How does it work?
-
-It is the Outline normal flow:
+It usually works as below.
 
 ```
 (Outline client) <-> [Outline Upstream Server] <-> (Internet)
 ```
 
-### What does bridge server do?
+### What does the bridge server do?
 
-The bridge server prevents the direct connection between the client and the upstream server.
+The bridge server will be inserted between clients and a server to connect the clients to the server
+in networks where this connection is not possible directly.
+It passes the incoming traffic from clients to the specified Outline server.
 
 The bridge server changes the flow as below.
 
