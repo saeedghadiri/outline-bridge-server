@@ -8,7 +8,8 @@ It helps Outline proxy to work in highly restricted networks.
 ### Outline
 
 [Outline](https://getoutline.org) is a Shadowsocks-based proxy created by Google.
-It provides high-quality Shadowsocks servers, clients, and managers.
+It lets you create and manage Shadowsocks servers easily.
+Outline clients are well-designed applications available for all platforms, as well.
 
 It usually works as below.
 
