@@ -35,7 +35,7 @@ Read the [Outline official documentation](https://getoutline.org/get-started) to
 
 ### Setup the bridge server
 
-Follow these steps to run the V2Ray proxy server.
+Follow these steps to run the V2Ray proxy on the bridge server.
 
 1. Install Docker and Docker-compose.
 1. Clone this repository into the bridge server.
