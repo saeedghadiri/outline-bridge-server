@@ -40,8 +40,8 @@ Follow these steps to run the V2Ray proxy server.
 1. Install Docker and Docker-compose.
 1. Clone this repository into the bridge server.
 1. Run `./setup.py` script. It gets the following inputs:
-    1. `Outline Server Hostname`: The Outline server IP or domain (Outline Manager: Settings > Hostname)
-    1. `Outline Server Port`: The Outline server port (Outline Manager: Settings > Port)
+    1. `Outline Server Hostname`: Find it in Outline Manager: Settings > Hostname
+    1. `Outline Server Port`: Find it in Outline Manager: Settings > Port
     1. `Bridge Port`: Enter a free port for the bridge (V2Ray) server like `1210`
 1. Run `docker-compose up -d`.
 
