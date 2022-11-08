@@ -10,7 +10,7 @@
       "port": 1210,
       "protocol": "dokodemo-door",
       "settings": {
-        "address": "<OUTLINE-SERVER-IP>",
+        "address": "1.2.3.4",
         "port": 1210,
         "network": "tcp,udp"
       }
