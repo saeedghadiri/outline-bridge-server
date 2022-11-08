@@ -31,7 +31,7 @@ The bridge (V2Ray) server changes the flow as below.
 
 ### Setup Outline
 
-Read the [Outline official documentation](https://getoutline.org) to set up an Outline server using the Outline Manager application.
+Read the [Outline official documentation](https://getoutline.org/get-started) to set up an Outline server using the Outline Manager application.
 
 ### Setup the bridge server
 
