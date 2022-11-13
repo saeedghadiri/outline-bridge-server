@@ -14,7 +14,7 @@ Outline clients are well-designed applications available for all platforms.
 It usually works as below.
 
 ```
-(Outline client) <-> [Outline server] <-> (Internet)
+[Outline client] <-> [Outline server] <-> (Internet)
 ```
 
 ### The Bridge Server
@@ -26,7 +26,7 @@ It runs a V2Ray proxy to pass the incoming Shadowsocks traffic from clients to t
 The bridge server changes the flow as below.
 
 ```
-(Outline client) <-> [V2Ray server] <-> [Outline server] <-> (Internet)
+[Outline client] <-> [V2Ray server] <-> [Outline server] <-> (Internet)
 ```
 
 ### Setup Outline
