@@ -42,7 +42,7 @@ Follow these steps to run the V2Ray proxy on the bridge server.
     1. `Outline Server Port`: Find it in Outline Manager > {Server} > Settings > Port
     1. Allow the port for incoming/outcoming traffic if you have a firewall.
 1. Run `docker-compose up -d`.
-1. Open Outline Manager and change the server hostname to the bridge server IP address.
+1. Edit Outline Manager > {Server} > Settings > Hostname to the bridge server IP address.
 
 After updating the hostname in the Outline Manager, delete old keys and generate them again.
 
