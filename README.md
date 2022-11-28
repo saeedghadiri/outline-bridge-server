@@ -44,7 +44,7 @@ Follow these steps to run the V2Ray proxy on the bridge server.
 1. Run `docker-compose up -d`.
 1. Open Outline Manager and change the server hostname to the bridge server IP address.
 
-Important: After updating the hostname in the Outline Manager application, remove old keys and generate them again.
+After updating the hostname in the Outline Manager application, remove old keys and generate them again.
 
 ### Docker images
 
