@@ -5,8 +5,8 @@ services:
     image: ghcr.io/getimages/v2fly-core:v4.45.2
     restart: always
     ports:
-      - ${V2RAY_PORT:-1210}:1210
-      - ${V2RAY_PORT:-1210}:1210/udp
+      - ${V2RAY_PORT:-1000}:1000
+      - ${V2RAY_PORT:-1000}:1000/udp
     volumes:
       - ./config/:/etc/v2ray/
       - ./logs:/var/log/v2ray/

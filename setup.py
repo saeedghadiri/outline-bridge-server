@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 import json
-import re
 from pathlib import Path
 
 # LOAD CONFIG FILES
@@ -39,22 +38,13 @@ if outlinePort == '':
 
 config['inbounds'][0]['settings']['port'] = int(outlinePort)
 
-# INPUT: BRIDGE PORT
-
-matches = re.findall(r"V2RAY_PORT=(\d+)", env)
-defaultBridgePort = matches[0]
-
-bridgePort = input(f"V2Ray Port: (Leave empty to use `{defaultBridgePort}`)\n")
-if bridgePort == '':
-    bridgePort = defaultBridgePort
-
 # SAVE CONFIG FILE
 
 configContent = json.dumps(config, indent=2)
 open(configPath, 'w', encoding='utf-8').write(configContent)
 
 # SAVE ENV FILE
-envContent = f"V2RAY_PORT={bridgePort}\n"
+envContent = f"V2RAY_PORT={outlinePort}\n"
 envPath = str(path.joinpath('.env'))
 open(envPath, 'w', encoding='utf-8').write(envContent)
 
