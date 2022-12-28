@@ -9,7 +9,7 @@ It helps Outline proxy to work in highly restricted networks.
 
 [Outline](https://getoutline.org) is a Shadowsocks-based proxy created by Google.
 It lets you create and manage Shadowsocks servers easily.
-Outline clients are well-designed applications available for all platforms.
+Outline clients are also well-designed applications available for all platforms.
 
 It usually works as below.
 
@@ -23,7 +23,7 @@ Read the [Outline official documentation](https://getoutline.org/get-started) to
 
 The bridge server will be inserted between clients and a server to connect the clients to the server
 in networks where this connection is not possible directly.
-It runs a V2Ray proxy to pass the incoming Shadowsocks traffic from clients to the Outline server.
+It runs a V2Ray proxy to pass the incoming Shadowsocks traffic (TCP and UDP) from clients to the Outline server.
 
 The bridge server changes the flow as below.
 
@@ -42,11 +42,14 @@ Follow these steps to run the V2Ray proxy on the bridge server.
     1. `Outline Server Port`: Find it in Outline Manager > {Server} > Settings > Port
     1. Allow the port for incoming/outcoming traffic if you have a firewall.
 1. Run `docker-compose up -d`.
-1. Edit Outline Manager > {Server} > Settings > Hostname to the bridge server IP address.
+1. Change Outline Manager > {Server} > Settings > Hostname to the bridge server IP address.
 
-After updating the hostname in the Outline Manager, delete old keys and generate them again.
+After updating the hostname in the Outline Manager, delete old keys and generate new ones.
 
 ### Docker images
+
+By default, this repository uses the GitHub registry.
+You can modify the Docker-compose file to use Docker Hub.
 
 * GitHub:
     * Image: ```ghcr.io/getimages/v2fly-core:v4.45.2```
