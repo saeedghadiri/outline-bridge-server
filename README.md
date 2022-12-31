@@ -19,7 +19,7 @@ It usually works as below.
 
 Read the [Outline official documentation](https://getoutline.org/get-started) to set up an Outline server.
 
-### Bridge Server
+### V2Ray as Bridge Server
 
 The bridge server will be inserted between clients and a server to connect the clients to the server
 in networks where this direct connection is not possible/safe/stable.
@@ -31,18 +31,18 @@ The bridge server changes the flow as below.
 [Outline client] <-> [V2Ray server] <-> [Outline server] <-> (Internet)
 ```
 
-#### Setup the Bridge Server
+### Setup
 
-Follow these steps to run the V2Ray proxy on the bridge server.
+Follow these steps to set up the V2Ray and Outline:
 
-1. Install Docker and Docker-compose.
+1. Install Docker and Docker-compose on the bridge server.
 1. Clone this repository into the bridge server.
 1. Run `./setup.py` script. It gets the following inputs:
     1. `Outline Server Hostname`: Find it in Outline Manager > {Server} > Settings > Hostname
     1. `Outline Server Port`: Find it in Outline Manager > {Server} > Settings > Port
     1. Allow the port for incoming/outcoming traffic if you have a firewall.
 1. Run `docker-compose up -d`.
-1. Change Outline Manager > {Server} > Settings > Hostname to the bridge server IP address.
+1. Change Outline Manager > {Server} > Settings > Hostname field to the bridge server IP address.
 1. Delete old access keys in the Outline Manager and generate new ones.
 1. Download [Outline client applications](https://getoutline.org/get-started/#step-3) and add the new access keys there.
 1. Enjoy the freedom!
