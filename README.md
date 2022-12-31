@@ -1,7 +1,7 @@
 # Outline Bridge Server
 
-This repository contains V2Ray Docker Compose files to run a bridge server for the Outline proxy.
-It helps Outline proxy to work in highly restricted networks.
+This repository contains Docker Compose files to run the V2Ray proxy as a bridge server for the Outline proxy.
+It helps the Outline proxy to work in highly restricted networks without direct/safe/stable access to Outline servers.
 
 ## Documentation
 
@@ -17,12 +17,12 @@ It usually works as below.
 [Outline client] <-> [Outline server] <-> (Internet)
 ```
 
-Read the [Outline official documentation](https://getoutline.org/get-started) to set up an Outline server using the Outline Manager application.
+Read the [Outline official documentation](https://getoutline.org/get-started) to set up an Outline server.
 
-### The Bridge Server
+### Bridge Server
 
 The bridge server will be inserted between clients and a server to connect the clients to the server
-in networks where this connection is not possible directly.
+in networks where this direct connection is not possible/safe/stable.
 It runs a V2Ray proxy to pass the incoming Shadowsocks traffic (TCP and UDP) from clients to the Outline server.
 
 The bridge server changes the flow as below.
@@ -31,7 +31,7 @@ The bridge server changes the flow as below.
 [Outline client] <-> [V2Ray server] <-> [Outline server] <-> (Internet)
 ```
 
-#### Setup the bridge server
+#### Setup the Bridge Server
 
 Follow these steps to run the V2Ray proxy on the bridge server.
 
@@ -43,8 +43,9 @@ Follow these steps to run the V2Ray proxy on the bridge server.
     1. Allow the port for incoming/outcoming traffic if you have a firewall.
 1. Run `docker-compose up -d`.
 1. Change Outline Manager > {Server} > Settings > Hostname to the bridge server IP address.
-
-After updating the hostname in the Outline Manager, delete old keys and generate new ones.
+1. Delete old access keys in the Outline Manager and generate new ones.
+1. Download [Outline client applications](https://getoutline.org/get-started/#step-3) and add the new access keys there.
+1. Enjoy the freedom!
 
 ### Docker images
 
@@ -62,4 +63,4 @@ You can modify the Docker-compose file to use Docker Hub.
 
 ## More
 
-* [V2Ray Docker Compose (Bridge and Upstream Servers)](https://github.com/miladrahimi/v2ray-docker-compose)
+* [V2Ray Docker Compose](https://github.com/miladrahimi/v2ray-docker-compose)
