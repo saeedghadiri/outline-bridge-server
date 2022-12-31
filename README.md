@@ -47,7 +47,7 @@ Follow these steps to run the V2Ray proxy on the bridge server.
 1. Download [Outline client applications](https://getoutline.org/get-started/#step-3) and add the new access keys there.
 1. Enjoy the freedom!
 
-### Docker images
+### Docker Images
 
 By default, this repository uses the GitHub registry.
 You can modify the Docker-compose file to use Docker Hub.
