@@ -10,8 +10,8 @@
       "port": 1000,
       "protocol": "dokodemo-door",
       "settings": {
-        "address": "1.2.3.4",
-        "port": 1000,
+        "address": "135.181.40.79",
+        "port": 443,
         "network": "tcp,udp"
       }
     }
